@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Teste {
+	public static void main (String[] args) {
+		Scanner entrada = new Scanner(System.in);
+
+		//Parte 01
+		
+		//Questão 01
+		System.out.print("Escreva um número inteiro: ");
+		int num = entrada.nextInt();
+		
+		if (num > 0){
+			System.out.print(" ");
+			System.out.println("O número é positivo!");
+		}else if (num < 0){
+			System.out.print(" ");
+			System.out.println("O número é negativo!");
+		}else {
+			System.out.print(" ");
+			System.out.println("O número é nulo!");
+		}
+		
+		
+		//Questão 02
+		System.out.print(" ");
+		System.out.print("Escreva outro número inteiro: ");
+		int num2 = entrada.nextInt();
+		
+		if (num2 % 2 == 0){
+			System.out.print(" ");
+			System.out.print("O número é par!");
+		}else{
+			System.out.print(" ");
+			System.out.print("O número é impar!");
+		}
+
+	}
+	
+}
