@@ -20,8 +20,6 @@ public class Teste {
 			System.out.print(" ");
 			System.out.println("O número é nulo!");
 		}
-		
-		
 		//Questão 02
 		System.out.print(" ");
 		System.out.print("Escreva outro número inteiro: ");
@@ -34,9 +32,8 @@ public class Teste {
 			System.out.print(" ");
 			System.out.print("O número é impar!");
 		}
-
-//Questão 3 — Maior de dois números
-System.out.print("Escreva o valor do primeiro número: ");
+		//Questão 3 — Maior de dois números
+		System.out.print("Escreva o valor do primeiro número: ");
 		int num1 = entrada.nextInt();
 		System.out.print("Escreva o valor do segundo número: ");
 		int num2 = entrada.nextInt();
@@ -48,15 +45,49 @@ System.out.print("Escreva o valor do primeiro número: ");
 			}else{
 			System.out.print("Os números são iguais");
 			}
-
-
-
-
-
-
-
-
-
+		//Questão 4 — Situação do aluno
+		System.out.print("Escreava a primeira nota: ");
+		double n1 = entrada.nextInt();
+		System.out.print("Escreva a segunda nota: ");
+		double n2 = entrada.nextInt();
+		System.out.print("Escreva a terceira nota: ");
+		double n3 = entrada.nextInt();
+		
+		System.out.println(" ");
+		System.out.println("A média das notas é: ");
+		double media = (n1+n2+n3)/3;
+		System.out.print(media);
+		
+		if (media>=7){
+		System.out.println(" ");
+		System.out.println("O aluno foi aprovado!");
+		}else if (media>=5){
+		System.out.println(" ");
+		System.out.println("O aluno ficou recuperação!");
+		}else{
+		System.out.println(" ");
+		System.out.println("O aluno foi reprovado!");
+		}
+		//Questão 5 — Classificação de idade
+		System.out.print("Escreva a idade de uma pessoa: ");
+		int idade = entrada.nextInt();
+			
+		if (idade<0){
+		System.out.println(" ");
+		System.out.println("Idade inválida!");
+		}else if (idade<=12){
+		System.out.println(" ");
+		System.out.println("A pessoa é Criança!");
+		}else if(idade<=17){
+		System.out.println(" ");
+		System.out.println("A pessoa é Adolescente!");
+		}else if(idade<=59){
+		System.out.println(" ");
+		System.out.println("A pessoa é Adulto!");
+		}else{
+		System.out.println(" ");
+		System.out.println("A pessoa é Idoso!");
+		}
 	}
 	
 }
