@@ -1,0 +1,78 @@
+import java.util.Scanner;
+
+public class Teste {
+	public static void main (String[] args) {
+		Scanner entrada = new Scanner(System.in);
+
+		//Questão 06
+		System.out.print("Dígite um número de 1 a 7: ");
+		int num = entrada.nextInt();
+		
+		switch (num) {
+			case 1:
+				System.out.print("O dia é: Segunda");
+				break;
+			case 2:
+				System.out.print("O dia é: Terça");
+				break;
+			case 3:
+				System.out.print("O dia é: Quarta");
+				break;
+			case 4:
+				System.out.print("O dia é: Quinta");
+				break;
+			case 5:
+				System.out.print("O dia é: Sexta");
+				break;
+			case 6:
+				System.out.print("O dia é: Sábado");
+				break;
+			case 7:
+				System.out.print("O dia é: Domingo");
+				break;
+			
+			default:
+				System.out.print("O dia é Inválido!");
+				return;
+		}
+
+		//Questão 07
+		System.out.print("Dígite o primeiro valor: ");
+		int v1 = entrada.nextInt();
+		System.out.print("Dígite o segundo valor: ");
+		int v2 = entrada.nextInt();
+		System.out.println(" ");
+		
+		System.out.print("Digite a operação: ");
+		String nome_operacao = entrada.next();
+		
+		switch (nome_operacao){
+			case "soma":
+				System.out.print("Cálculo: "+v1+"+"+v2);
+				int calculo_operacao_soma = v1+v2;
+				System.out.println(" ");
+				System.out.print("Resultado da operação: "+calculo_operacao_soma);
+				break;
+			case "subtracao":
+				System.out.print("Cálculo: "+v1+"-"+v2);
+				int calculo_operacao_sub = v1-v2;
+				System.out.println(" ");
+				System.out.print("Resultado da operação: "+calculo_operacao_sub);
+				break;
+			case "multiplicacao":
+				System.out.print("Cálculo: "+v1+"x"+v2);
+				int calculo_operacao_mult = v1*v2;
+				System.out.println(" ");
+				System.out.print("Resultado da operação: "+calculo_operacao_mult);
+				break;
+			case "divisao":
+				System.out.print("Cálculo: "+v1+"/"+v2);
+				int calculo_operacao_div = v1/v2;
+				System.out.println(" ");
+				System.out.print("Resultado da operação: "+calculo_operacao_div);
+				break;
+	
+			}	
+	}
+	
+}
