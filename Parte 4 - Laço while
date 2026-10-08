@@ -1,0 +1,45 @@
+import java.util.Scanner;
+public class Parte04 {
+    public static void main(String[] args) {
+//Questão13
+        int i = 10;
+        while (i >= 1) {
+            System.out.println(i);
+            i--;
+        }
+        System.out.println("Fim da contagem!");
+//Questão14
+Scanner scanner = new Scanner(System.in);
+        int soma = 0;
+        int numero = -1; 
+        
+        while (numero != 0) {
+            System.out.print("Digite um número (0 para sair): ");
+            numero = scanner.nextInt();
+            soma += numero;
+        }
+        System.out.println("Soma total: " + soma);
+        scanner.close();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+}
