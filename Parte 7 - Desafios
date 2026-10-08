@@ -1,0 +1,102 @@
+import java.util.Scanner;
+public class Parte07 {
+    public static void main(String[] args) {
+//Questão23
+        Scanner scanner = new Scanner(System.in);
+        int opcao;
+        double saldo = 0.0;
+        
+        do {
+            System.out.println("\n--- Caixa Eletrônico ---");
+            System.out.println("1 - Consultar saldo");
+            System.out.println("2 - Depositar");
+            System.out.println("3 - Sacar");
+            System.out.println("0 - Sair");
+            System.out.print("Escolha uma opção: ");
+            opcao = scanner.nextInt();
+            
+            switch (opcao) {
+                case 1:
+                    System.out.printf("Saldo atual: %.2f\n", saldo);
+                    break;
+                case 2:
+                    System.out.print("Digite o valor para depósito: ");
+                    double deposito = scanner.nextDouble();
+                    if (deposito > 0) {
+                        saldo += deposito;
+                        System.out.println("Depósito realizado.");
+                    } else {
+                        System.out.println("Valor inválido.");
+                    }
+                    break;
+                case 3:
+                    System.out.print("Digite o valor para saque: ");
+                    double saque = scanner.nextDouble();
+                    if (saque > 0 && saque <= saldo) {
+                        saldo -= saque;
+                        System.out.println("Saque realizado.");
+                    } else if (saque > saldo) {
+                        System.out.println("Operação negada. Saldo insuficiente.");
+                    } else {
+                        System.out.println("Valor inválido.");
+                    }
+                    break;
+                case 0:
+                    System.out.println("Encerrando operações no caixa...");
+                    break;
+                default:
+                    System.out.println("Opção inválida. Tente novamente.");
+            }
+        } while (opcao != 0);
+        
+        scanner.close();
+//Questão24
+Scanner scanner = new Scanner(System.in);
+        int opcao;
+        int totalAlunos = 0;
+        int totalAprovados = 0;
+        int totalReprovados = 0;
+        
+        do {
+            System.out.println("\n--- Sistema de Notas ---");
+            System.out.println("1 - Cadastrar aluno");
+            System.out.println("2 - Mostrar quantidade de alunos");
+            System.out.println("3 - Mostrar aprovados");
+            System.out.println("4 - Mostrar reprovados");
+            System.out.println("0 - Sair");
+            System.out.print("Escolha uma opção: ");
+            opcao = scanner.nextInt();
+            
+            switch (opcao) {
+                case 1:
+                    System.out.print("Introduza a média do aluno: ");
+                    double media = scanner.nextDouble();
+                    totalAlunos++;
+                    if (media >= 7) {
+                        totalAprovados++;
+                        System.out.println("Aluno cadastrado com estado: Aprovado.");
+                    } else {
+                        totalReprovados++;
+                        System.out.println("Aluno cadastrado com estado: Reprovado.");
+                    }
+                    break;
+                case 2:
+                    System.out.println("Quantidade total de alunos: " + totalAlunos);
+                    break;
+                case 3:
+                    System.out.println("Total de alunos aprovados: " + totalAprovados);
+                    break;
+                case 4:
+                    System.out.println("Total de alunos reprovados: " + totalReprovados);
+                    break;
+                case 0:
+                    System.out.println("Encerrando o sistema de notas...");
+                    break;
+                default:
+                    System.out.println("Opção inválida. Tente novamente.");
+            }
+        } while (opcao != 0);
+        
+        scanner.close();
+    }
+}
